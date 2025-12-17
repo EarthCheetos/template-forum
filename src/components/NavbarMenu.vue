@@ -73,8 +73,9 @@ export default {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background: #222;
+    background: #393939;
     color: white;
+    border-radius: 10px;
 }
 
 .profile-btn {

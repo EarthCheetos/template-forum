@@ -3,7 +3,6 @@
         <form @submit.prevent="createPost">
             <textarea v-model="content" placeholder="Write something..."></textarea>
             <button class="btn-post">Create post</button>
-            
         </form>
         <button @click.prevent="cancel" class="btn-cancel">Cancel</button>
     </div>

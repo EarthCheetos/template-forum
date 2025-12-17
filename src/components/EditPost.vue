@@ -10,7 +10,6 @@
 
     <div v-else>
       <textarea v-model="post.content" rows="6"></textarea><br />
-
       <button @click="updatePost">Save Changes</button>
       <button @click="$router.push('/mainpage')">Cancel</button>
     </div>

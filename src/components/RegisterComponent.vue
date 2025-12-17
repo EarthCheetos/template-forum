@@ -52,7 +52,7 @@ export default {
                 formData.append("img_profile", this.img_profile);
 
                 const res = await axios.post('/auth/register', formData, {
-                    headers: {
+                    header: {
                         "Content-Type": "multipart/form-data",
                     },
                 });
