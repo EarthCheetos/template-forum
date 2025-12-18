@@ -8,7 +8,7 @@
             <div class="dropdown">
                 <button class="profile-btn" @click="toggle">
                     <img :src="user.img_user || defaultPic" class="avatar" />
-                    <span>{{ user.username }}</span> ▼
+                    <span>{{ user.username }}</span> 
                 </button>
 
                 <div class="menu" v-if="open">
