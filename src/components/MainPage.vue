@@ -1,7 +1,7 @@
 <template>
-    
+
     <div>
-    <NavbarMenu />
+        <NavbarMenu />
         <h2>Forum</h2>
         <button @click="createPost" class="create-post">Create Post</button><br />
 
@@ -29,20 +29,20 @@ import api from "../services/api.js";
 import NavbarMenu from "./NavbarMenu.vue";
 
 export default {
-  components: { NavbarMenu },
+    components: { NavbarMenu },
     data() {
         return {
             posts: [],
             user: (() => {
-    try {
-        const raw = localStorage.getItem("user");
-        const u = raw ? JSON.parse(raw) : {};
-        return { ...u, id: Number(u.id) };
-    } catch (e) {
-        console.error("Bad user JSON:", e);
-        return { id: 0 }; 
-    }
-})(),
+                try {
+                    const raw = localStorage.getItem("user");
+                    const u = raw ? JSON.parse(raw) : {};
+                    return { ...u, id: Number(u.id) };
+                } catch (e) {
+                    console.error("Bad user JSON:", e);
+                    return { id: 0 };
+                }
+            })(),
 
         };
     },
@@ -103,7 +103,7 @@ export default {
     flex-direction: column;
 }
 
-.btn-post{
+.btn-post {
     border: none;
     color: white;
     background: rgb(5, 123, 192);
@@ -111,7 +111,8 @@ export default {
     border-radius: 5px;
     width: 100%;
 }
-.btn-delete{
+
+.btn-delete {
     border: none;
     color: white;
     background: rgb(192, 5, 5);
@@ -119,7 +120,8 @@ export default {
     border-radius: 5px;
     width: 100%;
 }
-.create-post{
+
+.create-post {
     border: none;
     color: white;
     background: rgb(0, 132, 255);
